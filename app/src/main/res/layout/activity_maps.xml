@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/background_border_purple">
+
+        <ImageView
+            android:id="@+id/navigation_view_image"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:padding="1dp"
+            android:src="@drawable/hospital_logo1"
+            android:background="@color/BackgroundComplimenttary"/>
+
+        <EditText
+            android:id="@+id/TF_address"
+            android:layout_width="305dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="42dp"
+            android:layout_marginRight="0dp"
+            android:layout_toRightOf="@id/navigation_view_image"
+            android:hint="Try Search"
+            android:textColorHint="@color/BackgroundComplimenttary"
+            android:paddingLeft="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/BackgroundComplimenttary"
+            app:backgroundTint="@color/backgroundLine" />
+
+        <Button
+            android:id="@+id/GO_button"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@id/TF_address"
+            android:background="@drawable/search_button6"
+            android:onClick="onSearch"
+            android:padding="5dp" />
+
+    </RelativeLayout>
+
+<HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="horizontal" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="2dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="3dp"
+        android:paddingEnd="3dp">
+
+        <Button
+            android:id="@+id/hospital_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_border_1dp_black"
+            android:textColor="@color/BackgroundComplimenttary"
+            android:onClick="onClick"
+            android:text="Nearby Hospitals"
+             />
+
+
+        <Button
+            android:id="@+id/pharmacy_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_border_1dp_black"
+            android:onClick="onClick"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="Nearby Pharmacy"
+            android:textColor="@color/BackgroundComplimenttary"
+             />
+
+        <Button
+            android:id="@+id/restaurant_button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_border_1dp_black"
+            android:onClick="onClick"
+            android:text="NEARBY RESTAURANTS"
+            android:textColor="@color/BackgroundComplimenttary" />
+
+        <Button
+            android:id="@+id/atm_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_border_1dp_black"
+            android:onClick="onClick"
+            android:text="Nearby ATMs"
+            android:textColor="@color/BackgroundComplimenttary"
+             />
+
+        <Button
+            android:id="@+id/hospital_list_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_border_1dp_black"
+            android:onClick="onClick"
+            android:text="Hospital list"
+            android:textColor="@color/BackgroundComplimenttary" />
+
+        <Button
+            android:id="@+id/pharmacy_list_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_border_1dp_black"
+            android:onClick="onClick"
+            android:text="Pharmacy list"
+            android:textColor="@color/BackgroundComplimenttary"
+         />
+
+    </LinearLayout>
+</HorizontalScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MapsActivity" />
+
+        <Button
+            android:id="@+id/change_terrain_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignEnd="@id/map"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/terrain"
+
+            android:onClick="changeType"
+            android:textColor="#BDBDBD"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/ZOOMIN_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/change_terrain_button"
+            android:layout_alignEnd="@id/map"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/plus_btn"
+            android:onClick="onZoom"
+            android:text="+"
+            android:textColor="@color/TextColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/ZOOMOUT_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/ZOOMIN_button"
+            android:layout_alignEnd="@id/map"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/plus_btn"
+            android:onClick="onZoom"
+            android:text="-"
+            android:textColor="@color/TextColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>
+</android.support.constraint.ConstraintLayout>

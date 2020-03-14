@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">mediAid</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_nav_presence">nav_presence</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_navigation_drawer">navigation_drawer</string>
+    <string name="very_severely_underweight">Very severely underweight</string>
+    <string name="severely_underweight">Severely underweight</string>
+    <string name="underweight">Underweight</string>
+    <string name="normal">Normal</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese_class_i">Obese class I</string>
+    <string name="obese_class_ii">Obese class II</string>
+    <string name="obese_class_iii">Obese class III</string>
+    <string name="risk">:: Risks associated with being overweight ::
+
+    \n\n1.High blood pressure \nHigher levels of LDL cholesterol(bad cholesterol)
+    \n2.lower levels of HDL cholesterol(good cholesterol)
+    \n3.high levels of triglycerides
+    \n4.Type II diabetes
+    \n5.Coronary heart disease
+    \n6.Stroke
+    \n7.Gallbladder disease
+    \n8.Osteoarthritis, a type of joint disease caused by breakdown of joint cartilage
+    \n9.Sleep apnea and breathing problems
+    \n10.Certain cancers (endometrial, breast, colon, kidney, gallbladder, liver)
+    \n11.Low quality of life
+    \n12.Mental illnesses such as clinical depression, anxiety, and others
+    \n13.Body pains and difficulty with certain physical functions
+    \n14.Generally, an increased risk of mortality compared to those with a healthy BMI
+
+    \n\n\n\n:: Risks associated with being underweight ::
+
+\n\n1.Malnutrition, vitamin deficiencies, anemia (lowered ability to carry blood vessels)
+\n2.Osteoporosis, a disease that causes bone weakness, increasing the risk of breaking a bone
+\n3.A decrease in immune function
+\n4.Growth and development issues, particularly in children and teenagers
+\n5.Possible reproductive issues for women due to hormonal imbalances that can disrupt the menstrual cycle. Underweight women also have a higher chance of miscarriage in the first trimester
+\n6.Potential complications as a result of surgery
+\n7.Generally, an increased risk of mortality compared to those with a healthy BMI
+\nIn some cases, being underweight can be a sign of some underlying condition or disease such as anorexia nervosa, which has its own risks.</string>
+</resources>

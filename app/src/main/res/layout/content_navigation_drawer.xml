@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".navigation_drawer"
+    tools:showIn="@layout/app_bar_navigation_drawer">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.flaviofaria.kenburnsview.KenBurnsView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@drawable/main_page_image"
+        />
+
+    <TextView
+        android:id="@+id/quote"
+        android:layout_width="378dp"
+        android:layout_height="117dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="460dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="the doctor should be opaque to his patients and like a mirror, should show them nothing but what is shown to him."
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        android:textColor="@color/TextColor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="527dp" />
+
+    <TextView
+        android:id="@+id/quoter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quote"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="18dp"
+        android:paddingRight="15dp"
+        android:text="Randa Haines"
+        android:textColor="@color/TextColor"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
