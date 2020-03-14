@@ -52,7 +52,7 @@ public class CustomDialogBox extends Activity {
                             }
                         catch (ActivityNotFoundException e) {
                             startActivity(new Intent(Intent.ACTION_VIEW,
-                                    Uri.parse("http://instagram.com/ahh.may")));
+                                    Uri.parse("http://instagram.com/Enter_Username")));
                         }
                     }
                 });
@@ -63,7 +63,7 @@ public class CustomDialogBox extends Activity {
         {
             public void onClick(View v)
             {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/”+AmeyJeurkar"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/”+ Enter_Username"));
                 startActivity(intent);
             }
         });
@@ -74,7 +74,7 @@ public class CustomDialogBox extends Activity {
         {
             public void onClick(View v)
             {
-                String phoneNumber="+91 7409909018";
+                String phoneNumber="enter phone number with proper areacode";
                 String url = "https://api.whatsapp.com/send?phone="+phoneNumber;
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
