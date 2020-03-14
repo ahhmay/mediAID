@@ -20,7 +20,7 @@
             android:layout_alignParentTop="true"
             android:elevation="0dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/background_mine" />
+            android:src="@drawable/blurred_effect" />
     </LinearLayout>
     <Button
         android:id="@+id/back_button"

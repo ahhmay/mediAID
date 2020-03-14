@@ -28,11 +28,11 @@ public class CustomDialogBox extends Activity {
                 dialog.setTitle("About Me");
 
 
-                Button instagram_btn=(Button)dialog.findViewById(R.id.instagram_button);
-                Button facebook_btn=(Button)dialog.findViewById(R.id.facebook_button);
-                Button whatsapp_btn=(Button)dialog.findViewById(R.id.whatsapp_button);
-                Button back_button = (Button)dialog.findViewById(R.id.back_button);
-                ImageView image = (ImageView) dialog.findViewById(R.id.back_image);
+                Button instagram_btn= dialog.findViewById(R.id.instagram_button);
+                Button facebook_btn= dialog.findViewById(R.id.facebook_button);
+                Button whatsapp_btn= dialog.findViewById(R.id.whatsapp_button);
+                Button back_button = dialog.findViewById(R.id.back_button);
+                ImageView image = dialog.findViewById(R.id.back_image);
                 image.setImageResource(R.drawable.amey_dev);
 
                 dialog.show();
@@ -42,7 +42,7 @@ public class CustomDialogBox extends Activity {
                 instagram_btn.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Uri uri = Uri.parse("http://instagram.com/_u/ahh.may");
+                        Uri uri = Uri.parse("http://instagram.com/_u/enter_username");
                         Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
 
                         likeIng.setPackage("com.instagram.android");
@@ -52,7 +52,7 @@ public class CustomDialogBox extends Activity {
                             }
                         catch (ActivityNotFoundException e) {
                             startActivity(new Intent(Intent.ACTION_VIEW,
-                                    Uri.parse("http://instagram.com/Enter_Username")));
+                                    Uri.parse("http://instagram.com/enter_username")));
                         }
                     }
                 });
@@ -63,7 +63,7 @@ public class CustomDialogBox extends Activity {
         {
             public void onClick(View v)
             {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/”+ Enter_Username"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/”+enter_usernane"));
                 startActivity(intent);
             }
         });
@@ -74,7 +74,7 @@ public class CustomDialogBox extends Activity {
         {
             public void onClick(View v)
             {
-                String phoneNumber="enter phone number with proper areacode";
+                String phoneNumber="Enter phone number Here with proper areacode( Example :: -  +91 1234567890 )";
                 String url = "https://api.whatsapp.com/send?phone="+phoneNumber;
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));

@@ -33,16 +33,16 @@ public class navigation_drawer extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
 
@@ -50,7 +50,7 @@ public class navigation_drawer extends AppCompatActivity
         //username_nav.setText();
 
         //KenBurns EFFECT addition
-        KenBurnsView kbv = (KenBurnsView) findViewById(R.id.image);
+        KenBurnsView kbv = findViewById(R.id.image);
         AccelerateDecelerateInterpolator ACCELERATE_DECELERATE = new AccelerateDecelerateInterpolator();
         RandomTransitionGenerator generator = new RandomTransitionGenerator(5000, ACCELERATE_DECELERATE);
         kbv.setTransitionGenerator(generator); //set new transition on kenburns view
@@ -82,7 +82,7 @@ public class navigation_drawer extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -145,15 +145,8 @@ public class navigation_drawer extends AppCompatActivity
 
             Intent i=new Intent(navigation_drawer.this,CustomDialogBox.class);
             startActivity(i);
-//            Toast.makeText(getApplicationContext(), "Will be revealed later", Toast.LENGTH_SHORT).show();
-
         }
         else if (id == R.id.nav_loggedOut) {
-//            Intent i=new Intent(navigation_drawer.this,FirstActivity.class);
-//            Toast.makeText(getApplicationContext(), "Logging Out", Toast.LENGTH_SHORT).show();
-//            startActivity(i);
-//            finish();
-
             new AlertDialog.Builder(this,R.style.CustomDialogTheme)
                     .setTitle("WARNING").setMessage("Are you sure you want to quit ?").setIcon(R.drawable.hospital_logo1)
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
@@ -167,7 +160,7 @@ public class navigation_drawer extends AppCompatActivity
                     }).setNegativeButton(android.R.string.no,null).show();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
